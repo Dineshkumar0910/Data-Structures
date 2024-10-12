@@ -1,0 +1,28 @@
+class Node:
+    def __init__(self, data):
+       # Data part of the node
+        self.data = data   
+        self.next = None 
+class linkedlist:
+    def __init__(self):
+        self.head = None
+    def func1(self,data):
+        var = Node(data)
+        if self.head == None:
+            self.head = var
+        else:
+            var2 = self.head
+            while var2.next:
+                var2 = var2.next
+            var2.next = var
+    def fun2(self):
+        s = self.head
+        while s:
+            print(s.data)
+            s=s.next
+            
+l = linkedlist()
+li=[4,5,6,7]
+for i in li:
+    l.func1(i) 
+l.fun2()
